@@ -193,7 +193,7 @@ function renderList() {
             spotify_link: 'https://open.spotify.com/track/5ao86t9dIQipcI4GHLVlc5',
             wiki: 'https://ru.wikipedia.org/wiki/%D0%9E%D0%B2%D1%81%D1%8F%D0%BD%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2%2C_%D0%9F%D0%B0%D0%B2%D0%B5%D0%BB_%D0%91%D0%BE%D1%80%D0%B8%D1%81%D0%BE%D0%B2%D0%B8%D1%87',
             notes: '',
-            fav: '',
+            fav: true,
         }, 
         {
             num: 14,
