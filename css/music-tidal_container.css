@@ -1,0 +1,360 @@
+.music-link-container{
+    display: block;
+    width: 100%;
+    margin: 15px;
+}
+
+.music-link{
+    display: inline-block;
+    margin: 0 10px 0 0;
+}
+.music-link img, .music-link a{
+    display: inline-block;
+    vertical-align: middle;
+
+}
+.music-link img{
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+}
+
+/* track container */
+div .content_closed {
+    width: 100%;
+	display: none;
+}
+
+.track-container{
+    padding: 5px;
+    margin-top: 10px;
+	border: .5px solid #2D2C31;
+    background-color: white;
+    filter:drop-shadow(-2px 2px .5px rgba(0,0,0,.15));
+    border-radius: 5px;
+}
+.track-container:hover{
+    background-color: rgb(241, 245, 255);
+}
+.track-container .coll-closed > *{
+    display: inline-block;
+    padding: 0;
+    vertical-align: middle;
+    margin: 0 1vw 0 0;
+}
+
+.track-num{
+    width: 30px;
+    text-align: left;
+    text-decoration: none;
+}
+
+.album-icon{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 2px;
+}
+.song-info{
+    width: 25vw;
+    text-align: left;
+}
+.album{
+    width: 15vw;
+    text-align: left;
+}
+.duration{
+    width: 3vw;
+    text-align: right;
+    margin: 0;
+}
+
+/* music player */
+/* .tidal-player {
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    background-color: aqua;
+}
+
+.tidal-player > iframe {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: -20px;
+    left: 0;
+    border: 0;
+    align-items: center;
+    background-color: blueviolet;
+} */
+
+.tidal-player img{
+    align-items: center;
+}
+
+/* media */
+.music {
+    margin: 0 0 10vh 0;
+}
+
+.media-container{
+	top: 0;
+    display: block;
+    margin: 3% 0 0 0;
+    padding: 0 1% 0 1%;
+    width: 100%;
+
+}
+iframe.tidal-embed {
+    width: 40vw;
+	height: 125px;
+    /* margin: 0 .5vw; */
+	display: inline-block;
+	vertical-align: top;
+    border-radius: 5px;
+}
+
+.media-container table {
+    width: 16vw;
+    border-spacing: 0;
+    border-collapse: collapse;
+	margin: 0 1vw 0 0;
+	display: inline-block;
+	vertical-align: top;
+}
+.media-container table td, .media-container table th{
+    border: .5px solid rgb(220, 220, 220);
+    text-align: left;
+    padding: 10px 5px;
+}
+
+.yt-playlist {
+    width: 40vw;
+    height: 22.5vw;
+    margin: 0 .5vw 0 0;
+    border-radius: 10px;
+
+}
+.main_tidal-embed {
+    position: relative;
+    width: 17vw;
+    height: 22.5vw;
+    margin: 0;
+    display: inline-block;
+    vertical-align: top;
+
+}
+.main_tidal-embed iframe {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 10px;
+
+}
+
+.playlist-description{
+    display: inline-block;
+	vertical-align: top;
+    margin: 1% 0 0 0;
+    padding: 0;
+    width: auto;
+}
+
+
+.tracklist-controls {
+    width: 100%;
+    text-align: right;
+}
+
+.tracklist-controls button{
+    padding: 7px 10px;
+    background-color: rgb(85, 90, 230);
+    color: white;
+    border-radius: 5px;
+
+}
+.tracklist-controls button:hover{
+    background-color: rgb(63, 67, 198);
+}
+/*  */
+#tracklist-placeholder {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .song-info{
+    width: 27vw;
+    }
+    .album{
+        width: 17vw;
+    }
+    .duration{
+        width: 7vw;
+    }
+
+    .yt-playlist {
+    width: 46vw;
+    height: 25.875vw;
+    margin: 0 .5vw 0 0;
+    }
+    .main_tidal-embed {
+    position: relative;
+    width: 17vw;
+    height: 25.875vw;
+    }
+    iframe.tidal-embed {
+        width: 44vw;
+        /* height: 25.875vw; */
+    }
+    .media-container table {
+        width: 19vw;
+    }
+    .media-container table td, .media-container table th{
+        padding: 7px 3px;
+    }
+}
+@media screen and (max-width: 900px) {
+    .yt-playlist {
+        width: 44vw;
+        height: 24.75vw;
+    }
+    .main_tidal-embed {
+        height: 24.75vw;
+
+    }
+    .song-info{
+        width: 25vw;
+    }
+    .album{
+        width: 15vw;
+    }
+    .duration{
+        width: 5vw;
+    }
+    iframe.tidal-embed {
+        width: 40vw;
+        /* height: 22.5vw; */
+    }
+    .media-container table {
+        width: 20vw;
+    }
+    /* iframe.tidal-embed {
+        width: 32vw;
+        height: 18vw;
+    }
+    .media-container table {
+        width: 15vw;
+    } */
+
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 820px) {
+	.music{
+		margin: 2vh 0 10vh 0;
+	}
+    .track-container{
+        padding: 2px;
+    }
+    .song-info{
+        width: 35vw;
+    }
+    .album{
+        width: 20vw;
+    }
+    .duration{
+        width: 12vw;
+    }
+
+    .yt-playlist {
+        width: 56vw;
+        height: 31.5vw;
+    }
+    /* width: 90vw;
+    height: 50.625vw; */
+
+    .main_tidal-embed {
+        width: 30vw;
+        /* height: 31.5vw; */
+    }
+    iframe.tidal-embed {
+        width: 56vw;
+        /* height: 31.5vw; */
+    }
+    .media-container table {
+        width: 28vw;
+    }
+}   
+
+@media screen and (max-width: 640px) {
+    .duration{
+        width: 7vw;
+    }
+    .media-container table td, .media-container table th{
+        border: .5px solid rgb(220, 220, 220);
+        padding: 5px 2px;
+    }
+    /* iframe.tidal-embed {
+        width: 44vw;
+    } */
+}
+
+@media screen and (max-width: 500px) {
+    /* .music{
+		margin: 3vh 0 0 0;
+	} */
+    .track-container{
+    padding: 5px 0 5px 0;
+    }
+    .track-container .coll-closed > *{
+    margin: 0 .5vw 0 0;
+    }
+    .song-info{
+        width: 50vw;
+    }
+    .album{
+        width:0;
+        height: 0;
+        visibility: hidden;
+        display: none;
+    }
+    .duration{
+        width:10vw;
+    }
+
+    iframe.tidal-embed {
+        width: 40vw;
+        height: 66vw;
+        /* height: 22.5vw; */
+    }
+    .media-container table {
+        width: 50vw;
+    }
+
+    /* .album-icon{
+        width: 35px;
+        height: 35px;
+    } */
+}
+@media screen and (max-width: 330px) {
+    .song-info{
+        width: 60vw;
+    }
+    .duration{
+        width:0;
+        height: 0;
+        visibility: hidden;
+        display: none;
+    }
+
+    iframe.tidal-embed {
+        width: 40vw;
+        height: 66vw;
+        /* height: 22.5vw; */
+    }
+}

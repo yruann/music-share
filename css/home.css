@@ -1,0 +1,39 @@
+
+h1{
+   text-decoration: none;
+}
+/* #viewframe::-webkit-scrollbar {
+  display: none;
+    } */
+
+#viewframe{
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    border: none;
+    overflow-x: hidden;
+    -ms-overflow-style: none; 
+    scrollbar-width: none;
+}
+
+@media screen and (max-width: 1200px) {
+
+}
+
+@media screen and (max-width: 900px) {
+    /* #viewframe{
+        position: relative;
+    } */
+}
+@media screen and (max-width: 820px) {
+    #viewframe{
+        position: relative;
+        width: 90%;
+        height: 900px;
+        margin: 0 auto;
+    }
+}

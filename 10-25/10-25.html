@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    	<title>☆ (10.22.2025)</title>
+		<link rel="icon" href="../img/icons/favicon.ico">
+
+    	<link rel="stylesheet" type="text/css" href="../css/style.css">
+		<link rel="stylesheet" type="text/css" href="../css/music.css">
+		<link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css?family=Syne+Mono" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
+	</head>
+
+	<body onload="renderList()">
+		<header>
+			<div>
+				<a id="title" href="../index.html"><em>music-share</em></a>
+				<nav>
+					<div>
+						<button type="button" class="coll-opened"><li><span>2025</span></li></button>
+						<ul class="content_opened">
+							<li><a href="10-25.html">☆ (10.22.2025) <h3>*new!</h3></a></li>
+						</ul>
+						<li><a href="../contact.html"><span>contact</span></a></li>
+					</div>
+				</nav>
+			</div>
+		</header>
+
+		<main>
+
+			<div class="music">
+				<h1>☆ (10.22.2025)</h1>	
+
+                <div class="media-container main-cont">
+					<iframe class="yt-playlist" src="https://www.youtube.com/embed/videoseries?si=pVIkmwcDzhPaGpRD&amp;list=PLOmUkmbqsrKiadNdXL4fSDLHNcAE2VwAG" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+					<div class="main_tidal-embed">
+						<iframe src="https://embed.tidal.com/playlists/ee0c811b-8bef-407e-864e-dc8765a39abe"  allowfullscreen allow="encrypted-media *; fullscreen *; web-share *;"></iframe>
+					</div>
+					<div class="playlist-description">
+  						<p>I started getting very into Russian music back in late March of this year due to <a href="https://www.youtube.com/watch?v=kdXYwFleqxs" target="_blank">this mix</a> on YouTube. My first impression was that it sounded unexpectedly similar to Citypop– specifically the first track, which I've included in my own playlist as the 12th track (although I completely forgot about the YT mix & rediscovered it on <a href="https://everynoise.com/" target="_blank">everynoise</a>.) I'm not sure how to describe how I feel about this music. I think 'nostalgic' isn't quite accurate. Obviously it's mostly pop/rock, but I think there's an element of it being a non-English language that creates a strange illusion of nostalgia for me. Maybe it's a symptom of listening to Cantonese karaoke when I was younger and not understanding a word.</p>
+						<p>There's so much I've discovered about these random artists. There's so much random lore and people dying and being killed for some reason. And singer nepo babies. That's a big one.</p>
+						<p>This playlist consists of 70s-00s Slavic music. Mostly Russian, some Ukrainian, and some Bulgarian. It is loosely sorted based on release date and genre, but mostly curated based on vibe ? I hope it flows well?</p>
+						<br>
+						<h1>More to Explore:</h1>
+							<div class="music-link"> <img src="../img/icons/wiki.png"> <a href="https://en.wikipedia.org/wiki/Russian_chanson" target="_blank"><p>Russian Chanson</p></a> </div>
+							<div class="music-link"> <img src="../img/icons/wiki.png"> <a href="https://en.wikipedia.org/wiki/Sovietwave" target="_blank"><p>Sovietwave</p></a> </div>
+							<div class="music-link"> <img src="../img/icons/wiki.png"> <a href="https://en.wikipedia.org/wiki/Estrada_(performing_arts_genre)" target="_blank"><p>Russian Estrada</p></a> </div>
+					</div>
+                </div>
+				<br><br>
+				<h1>Tracks</h1>
+				<h3>*click on the containers to learn about each track!</h3>
+
+				<div class="tracklist-controls">
+					<button onclick="expandAllTracks()">Expand All</button>
+					<button onclick="collapseAllTracks()">Collapse All</button>
+				</div>
+				<div id="tracklist-placeholder">Loading...</div>
+
+            </div>
+		</main>
+		<script src="https://unpkg.com/mustache@latest"></script>
+        <script type="text/javascript" src="data.js"></script>
+		<script src="../main.js"></script>
+	</body>
+</html>
+					
+
