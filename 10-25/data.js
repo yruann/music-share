@@ -124,7 +124,7 @@ function renderList() {
             tidal_link: 'https://tidal.com/track/57793334/u',
             spotify_link: 'https://open.spotify.com/track/7BwjUPx97RgQCNTpux1RrK',
             wiki: 'https://en.wikipedia.org/wiki/Murat_Nasyrov',
-            notes: "Murat Nasyrov was Soviet, Kazakhstani, Russian, and was of Uyghur descent. Early on in his career, Nasyrov performed with A'Studio (band in the next track) and was introduced to his producer by one of A'Studio's members, Baglan Sadvakasova. Nasyrov tragically committed suicide at 37 reportedly due to depression, and this was also after Baglan Sadvakasova passed away in a traffic accident the summer before. (side note: I do also really love this video.)"
+            notes: "Murat Nasyrov was Soviet, Kazakhstani, Russian, and was of Uyghur descent. Early on in his career, Nasyrov performed with A'Studio (band in the next track) and was introduced to his producer by one of A'Studio's members, Baglan Sadvakasova. Nasyrov tragically committed suicide at 37 reportedly due to depression half a year after Baglan Sadvakasova passed away in a traffic accident the summer before. (side note: I do also really love this video.)"
         },
         {
             num: 10,
@@ -362,7 +362,7 @@ function renderList() {
             tidal_link: 'https://tidal.com/track/67846113/u',
             spotify_link: 'https://open.spotify.com/track/7joBrwNnnjdC83BTsriVl0',
             wiki: 'https://en.wikipedia.org/wiki/Nyusha',
-            notes: 'Nyusha dresses like the girls in those 2000s flash dress up games in this music video. <br> She did a remake of this song with Persian singer Arash, who also appears on track 25.'
+            notes: 'Nyusha dresses like a girl in a 2000s flash dress up game in this music video. <br> She did a remake of this song with Persian singer Arash, who also appears on track 25.'
         }
     ];
 
@@ -383,102 +383,3 @@ function renderList() {
     document.getElementById('tracklist-placeholder').innerHTML = rendered;
     initTracklistInteractions();
 }
-
-
-            // tidal_embed: function() {
-            //     return function (text, render){
-            //         text = render(text);
-            //         const tidal_embed = 'https://embed.' + text.split('https://')[1].split('/u')[0];
-            //         return tidal_embed;
-            //     }
-            // },
-
-// https://tidal.com/track/190188581/u
-// html formatted template:
-				// {{#tracklist}} <div class="track-container">
-				// 	<button type="button" class="coll-closed ">
-				// 		<h1 class="track-num">{{num}}</h1>
-				// 		<img class="album-icon" src="{{num}}.jpg">
-				// 		<div class="song-info">
-				// 			<h3>{{song}}</h3>
-				// 			<p>>{{artist}}</p>
-				// 		</div>
-				// 		<p class="album">{{album}}</p>
-				// 		<p class="duration">{{duration}}</p>
-				// 	</button>
-				// 	<div class="content_closed">
-				// 		<div class="media-container">
-				// 			<div id="table"></div>
-                // <table> <tr> <th>Song</th> <td>{{song}}</td> </tr> <tr> <th>Artist</th> <td>{{artist}}</td> </tr> <tr> <th>Album</th> <td>{{album}}</td> </tr> <tr> <th>Year</th> <td>{{year}}</td> </tr> <tr> <th>Country</th> <td>{{country}}</td> </tr> </table>
-				// 			<iframe class="vid" src="{{yt_link}}" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-				// 		</div>
- 				// 		<div class="media-container">
- 				// 			<h3>Notes:</h3>
- 				// 			<p>{{notes}}</p>
- 				// 		</div>
-				// 		<div class="music-link-container">
-				// 			<div class="music-link">
-				// 				<img src="../img/icons/tidal.png">
-				// 				<a href="{{tidal_link}}" target="_blank"><p>tidal</p></a>
-				// 			</div>
-				// 			<div class="music-link">
-				// 				<img src="../img/icons/spotify.png">
-				// 				<a href="{{spotify_link}}" target="_blank"><p>spotify</p></a>
-				// 			</div>
-				// 		</div>
-				// 	</div>
-				// </div> {{/tracklist}}
-
-                
-
-
-                // <div class="track-container">
-                //     <button type="button" class="coll-closed track-toggle">
-                //         <h1 class="track-num">{{num}}</h1>
-                //         <img class="album-icon" src="{{num}}.png">
-                //         <div class="song-info">
-                //             <h3>{{song}}</h3>
-                //             <p>{{artist}}</p>
-                //         </div>
-                //         <p class="album">{{album}}</p>
-                //         <p class="duration">{{duration}}</p>
-                //     </button>
-                //     <div class="content_closed">
-                //         <div class="media-container">
-                //             <table cellspacing="0">
-                //                 <tr>
-                //                     <th>Song</th>
-                //                     <td>{{song}}</td>
-                //                 </tr>
-                //                 <tr>
-                //                     <th>Artist</th>
-                //                     <td>{{artist}}</td>
-                //                 </tr>
-                //                 <tr>
-                //                     <th>Album</th>
-                //                     <td>{{album}}</td>
-                //                 </tr>
-                //                 <tr>
-                //                     <th>Year</th>
-                //                     <td>{{year}}</td>
-                //                 </tr>
-                //                 <tr>
-                //                     <th>Country</th>
-                //                     <td>{{country}}</td>
-                //                 </tr>
-                //             </table>
-                //             <iframe class="vid" src="{{yt_link}}" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-                //         </div>
-                //         <div class="media-container">
-                //             <h3>Notes:</h3>
-                //             <p>{{{.}}}</p>
-                //         </div>
-                //         <div class="music-link-container">
-                //             <div class="music-link">
-                //                 <img src="../img/icons/wiki.png"> <a href="{{.}}" target="_blank"><p>wikipedia</p></a> </div> {{/wiki}} <div class="music-link"> 
-                //                 <img src="../img/icons/tidal.png"> <a href="{{tidal_link}}" target="_blank"><p>tidal</p></a> </div> <div class="music-link">
-                //                 <img src="../img/icons/spotify.png"> <a href="{{spotify_link}}" target="_blank"><p>spotify</p></a>
-                //             </div>
-                //         </div>
-                //     </div>
-                // </div>

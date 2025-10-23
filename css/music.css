@@ -295,7 +295,6 @@ iframe.vid {
         width: 7vw;
     }
     .media-container table td, .media-container table th{
-        border: .5px solid rgb(220, 220, 220);
         padding: 5px 2px;
     }
     /* iframe.vid {
@@ -339,9 +338,12 @@ iframe.vid {
     iframe.vid {
         width: 92vw;
         height: 51.75vw;
+        display: block;
     }
     .media-container table {
-        width: 100%;
+        width: 90vw;
+        display: block;
+        margin: 0 0 2% 0;
     }
 
     /* .album-icon{
