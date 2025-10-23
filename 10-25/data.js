@@ -8,7 +8,7 @@ function renderList() {
             country: 'Bulgaria',
             year: 1975,
             duration: '3:25',
-            yt_link: 'https://www.youtube.com/embed/pihwaswzciw?si=TSZ_wtSzD0_7lt6R',
+            yt_link: 'https://www.youtube.com/embed/pihwaswzciw',
             tidal_link: 'https://tidal.com/track/190188581/u',
             spotify_link: '',
             wiki: 'https://en.wikipedia.org/wiki/Lili_Ivanova',
@@ -50,7 +50,7 @@ function renderList() {
             country: 'Bulgaria',
             year: 1978,
             duration: '3:33',
-            yt_link: 'https://www.youtube.com/embed/i8CfHkUPSo4?si=Kws0dVnPDQC3KCSd',
+            yt_link: 'https://www.youtube.com/embed/i8CfHkUPSo4',
             tidal_link: 'https://tidal.com/track/178668405/u',
             spotify_link: '',
             wiki: 'https://en.wikipedia.org/wiki/Lili_Ivanova',
@@ -378,7 +378,7 @@ function renderList() {
 
     const template_f = '{{#tracklist}} <div class="track-container"> <button type="button" class="coll-closed track-toggle"> <h1 class="track-num">{{num}}</h1> <img class="album-icon" src="{{num}}.png" alt= "{{album}} by {{artist}}"> <div class="song-info"> <h3>{{song}}</h3> <p>{{artist}}</p> </div> <p class="album">{{album}}</p> <p class="duration">{{duration}}</p> </button> <div class="content_closed"> <div class="media-container"> <table cellspacing="0"> <tr> <th>Song</th> <td>{{song}}</td> </tr> <tr> <th>Artist</th> <td>{{artist}}</td> </tr> <tr> <th>Album</th> <td>{{album}}</td> </tr> <tr> <th>Year</th> <td>{{year}}</td> </tr> <tr> <th>Country</th> <td>{{country}}</td> </tr> </table>{{#tidal_embed}}<iframe class="tidal-embed" src="{{.}}" frameborder="0" allowfullscreen allow="encrypted-media *; fullscreen *; web-share *;"></iframe>{{/tidal_embed}}</div> {{#notes}}<div class="media-container"> <h3>Notes:</h3> <p>{{{.}}}</p> </div>{{/notes}} <div class="music-link-container"> {{#wiki}}<div class="music-link"> <img src="../img/icons/wiki.png"> <a href="{{.}}"target="_blank"><p>wikipedia</p></a> </div> {{/wiki}}<div class="music-link"> <img src="../img/icons/yt.png"> <a href="{{yt_link}}" target="_blank"><p>youtube</p></a> </div> <div class="music-link"> <img src="../img/icons/tidal.png"> <a href="{{tidal_link}}" target="_blank"><p>tidal</p></a> </div> <div class="music-link"> <img src="../img/icons/spotify.png"> <a href="{{spotify_link}}" target="_blank"><p>spotify</p></a> </div> </div> </div> </div> {{/tracklist}}';
     
-    const template = '{{#tracklist}} <div class="track-container"> <button type="button" class="coll-closed track-toggle"> <h1 class="track-num">{{num}}</h1> <img class="album-icon" src="{{num}}.png"> <div class="song-info"> <h3>{{song}}</h3> <p>{{artist}}</p> </div> <p class="album">{{album}}</p> <p class="duration">{{duration}}</p> </button> <div class="content_closed"> <div class="media-container"> <table cellspacing="0"> <tr> <th>Song</th> <td>{{song}}</td> </tr> <tr> <th>Artist</th> <td>{{artist}}</td> </tr> <tr> <th>Album</th> <td>{{album}}</td> </tr> <tr> <th>Year</th> <td>{{year}}</td> </tr> <tr> <th>Country</th> <td>{{country}}</td> </tr> </table> <iframe class="vid" src="{{yt_link}}" title="YouTube video player" frameborder="0" allowfullscreen></iframe> </div> {{#notes}}<div class="media-container"> <h3>Notes:</h3> <p>{{{.}}}</p> </div>{{/notes}} <div class="music-link-container"> {{#wiki}}<div class="music-link"> <img src="../img/icons/wiki.png"> <a href="{{.}}" target="_blank"><p>wikipedia</p></a> </div> {{/wiki}} <div class="music-link"> <img src="../img/icons/tidal.png"> <a href="{{tidal_link}}" target="_blank"><p>tidal</p></a> </div> <div class="music-link"> <img src="../img/icons/spotify.png"> <a href="{{spotify_link}}" target="_blank"><p>spotify</p></a> </div> </div> </div> </div> {{/tracklist}}';
+    const template = '{{#tracklist}} <div class="track-container"> <button type="button" class="coll-closed track-toggle"> <h1 class="track-num">{{num}}</h1> <img class="album-icon" src="{{num}}.png"> <div class="song-info"> <h3>{{song}}</h3> <p>{{artist}}</p> </div> <p class="album">{{album}}</p> <p class="duration">{{duration}}</p> </button> <div class="content_closed"> <div class="media-container"> <table cellspacing="0"> <tr> <th>Song</th> <td>{{song}}</td> </tr> <tr> <th>Artist</th> <td>{{artist}}</td> </tr> <tr> <th>Album</th> <td>{{album}}</td> </tr> <tr> <th>Year</th> <td>{{year}}</td> </tr> <tr> <th>Country</th> <td>{{country}}</td> </tr> </table> <iframe class="vid" src="{{yt_link}}?autoplay=0&controls=0" title="YouTube video player" frameborder="0" modestbranding allowfullscreen></iframe> </div> {{#notes}}<div class="media-container"> <h3>Notes:</h3> <p>{{{.}}}</p> </div>{{/notes}} <div class="music-link-container"> {{#wiki}}<div class="music-link"> <img src="../img/icons/wiki.png"> <a href="{{.}}" target="_blank"><p>wikipedia</p></a> </div> {{/wiki}} <div class="music-link"> <img src="../img/icons/tidal.png"> <a href="{{tidal_link}}" target="_blank"><p>tidal</p></a> </div> <div class="music-link"> <img src="../img/icons/spotify.png"> <a href="{{spotify_link}}" target="_blank"><p>spotify</p></a> </div> </div> </div> </div> {{/tracklist}}';
     const rendered = Mustache.render(template, {tracklist});
     document.getElementById('tracklist-placeholder').innerHTML = rendered;
     initTracklistInteractions();
