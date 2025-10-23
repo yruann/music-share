@@ -134,8 +134,8 @@ iframe.vid {
     height: 22.5vw;
     margin: 0 .5vw 0 0;
     border-radius: 10px;
-
 }
+
 .main_tidal-embed {
     position: relative;
     width: 17vw;
@@ -281,7 +281,7 @@ iframe.vid {
 
     .main_tidal-embed {
         width: 30vw;
-        /* height: 31.5vw; */
+        height: 31.5vw;
     }
     iframe.vid {
         width: 56vw;
@@ -309,6 +309,16 @@ iframe.vid {
     /* .music{
 		margin: 3vh 0 0 0;
 	} */
+
+    .yt-playlist {
+        width: 90vw;
+        height: 50.625vw;
+    }
+    .main_tidal-embed{
+        width: 90vw;
+        height: 125px;
+    }
+
     .track-container{
     padding: 5px 0 5px 0;
     }
