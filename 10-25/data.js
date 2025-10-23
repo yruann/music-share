@@ -373,8 +373,8 @@ function renderList() {
             tidal_link: 'https://tidal.com/track/80806996/u',
             spotify_link: 'https://open.spotify.com/track/0GD7uuKoO2UDDsAoXxwbtT',
             wiki: 'https://en.wikipedia.org/wiki/Blestyashchiye',
-            notes: '',
-            fav: 'The beginning of this song always reminds me of that one <a href="https://www.youtube.com/watch?v=71-KVntDZ7c" target="_blank">apple ringtone</a>',
+            notes: 'The beginning of this song always reminds me of that one <a href="https://www.youtube.com/watch?v=71-KVntDZ7c" target="_blank">apple ringtone</a>',
+            fav: '',
         }, 
         {
             num: 26,
