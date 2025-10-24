@@ -173,7 +173,7 @@ function renderList() {
             country: 'Russia / USSR',
             year: 1992,
             duration: '4:36',
-            yt_link: 'https://www.youtube.com/embed/8arOgTJ5Bcs',
+            yt_link: 'https://www.youtube.com/embed/Zr8K_Gvh07s',
             tidal_link: 'https://tidal.com/track/104978758/u',
             spotify_link: 'https://open.spotify.com/track/6C5Lanyu2z8xAQqTDXRH8g',
             wiki: 'https://en.wikipedia.org/wiki/Igor_Sarukhanov',
