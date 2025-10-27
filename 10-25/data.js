@@ -1,5 +1,4 @@
-function renderList() {
-    const tracklist = [
+let tracklist = [
         {
             num: 1,
             song: 'Утеха',
@@ -391,22 +390,55 @@ function renderList() {
             notes: 'Nyusha dresses like a girl in a 2000s flash dress up game in this music video. <br> She did a remake of this song with Persian singer Arash, who also appears on track 25.',
             fav: '',
         }
-    ];
+];
 
-     function getTidalEmbedLink(url) {
-        if (!url) return '';
-        const match = url.match(/tidal\.com\/track\/(\d+)/);
-        return match ? `https://embed.tidal.com/tracks/${match[1]}` : '';
-    }
 
-    tracklist.forEach(track => {
-        track.tidal_embed = getTidalEmbedLink(track.tidal_link);
-    });
+tracklist.forEach((track, index) => {
+    track.originalNum = index + 1;
+    track.tidal_embed = getTidalEmbedLink(track.tidal_link);
+});
 
-    const template_tidal = '{{#tracklist}} <div class="track-container"> <button type="button" class="coll-closed track-toggle"> <h1 class="track-num">{{num}}</h1> <img class="album-icon" src="{{num}}.png" alt= "{{album}} by {{artist}}"> <div class="song-info"> <h3>{{song}}</h3> <p>{{artist}}</p> </div> <p class="album">{{album}}</p> <p class="duration">{{duration}}</p> </button> <div class="content_closed"> <div class="media-container"> <table cellspacing="0"> <tr> <th>Song</th> <td>{{song}}</td> </tr> <tr> <th>Artist</th> <td>{{artist}}</td> </tr> <tr> <th>Album</th> <td>{{album}}</td> </tr> <tr> <th>Year</th> <td>{{year}}</td> </tr> <tr> <th>Country</th> <td>{{country}}</td> </tr> </table>{{#tidal_embed}}<iframe class="tidal-embed" src="{{.}}" frameborder="0" allowfullscreen allow="encrypted-media *; fullscreen *; web-share *;"></iframe>{{/tidal_embed}}</div> {{#notes}}<div class="media-container"> <h3>Notes:</h3> <p>{{{.}}}</p> </div>{{/notes}} <div class="music-link-container"> {{#wiki}}<div class="music-link"> <img src="../img/icons/wiki.png"> <a href="{{.}}"target="_blank"><p>wikipedia</p></a> </div> {{/wiki}}<div class="music-link"> <img src="../img/icons/yt.png"> <a href="{{yt_link}}" target="_blank"><p>youtube</p></a> </div> <div class="music-link"> <img src="../img/icons/tidal.png"> <a href="{{tidal_link}}" target="_blank"><p>tidal</p></a> </div> <div class="music-link"> <img src="../img/icons/spotify.png"> <a href="{{spotify_link}}" target="_blank"><p>spotify</p></a> </div> </div> </div> </div> {{/tracklist}}';
-    
-    const template = '{{#tracklist}} <div class="track-container {{#fav}}fav-track{{/fav}} "> <button type="button" class="coll-closed track-toggle"> <h1 class="track-num">{{num}}</h1> <img class="album-icon" src="{{num}}.png"> <div class="song-info"> <h3>{{song}}</h3> <p>{{artist}}</p> </div> <p class="album">{{album}}</p> <p class="duration">{{duration}}</p> </button> <div class="content_closed"> <div class="media-container"> <table cellspacing="0"> <tr> <th>Song</th> <td>{{song}}</td> </tr> <tr> <th>Artist</th> <td>{{artist}}</td> </tr> <tr> <th>Album</th> <td>{{album}}</td> </tr> <tr> <th>Year</th> <td>{{year}}</td> </tr> <tr> <th>Country</th> <td>{{country}}</td> </tr> </table><iframe class="vid" src="{{yt_link}}?autoplay=0" title="YouTube video player" frameborder="0" modestbranding allowfullscreen></iframe> </div> {{#notes}}<div class="media-container"> <h3>Notes:</h3> <p>{{{.}}}</p> </div>{{/notes}} <div class="music-link-container"> {{#wiki}}<div class="music-link"> <img src="../img/icons/wiki.png"> <a href="{{.}}" target="_blank"><p>wikipedia</p></a> </div> {{/wiki}} <div class="music-link"> <img src="../img/icons/tidal.png"> <a href="{{tidal_link}}" target="_blank"><p>tidal</p></a> </div> <div class="music-link"> <img src="../img/icons/spotify.png"> <a href="{{spotify_link}}" target="_blank"><p>spotify</p></a> </div> </div> </div> </div> {{/tracklist}}';
-    const rendered = Mustache.render(template, {tracklist});
+function getTidalEmbedLink(url) {
+    if (!url) return '';
+    const match = url.match(/tidal\.com\/track\/(\d+)/);
+    return match ? `https://embed.tidal.com/tracks/${match[1]}` : '';
+}
+
+function renderList(data) {    
+    const template = '{{#tracklist}} <div class="track-container {{#fav}}fav-track{{/fav}} "> <button type="button" class="coll-closed track-toggle"> <h1 class="track-num">{{num}}</h1> <img class="album-icon" src="{{originalNum}}.png"> <div class="song-info"> <h3>{{song}}</h3> <p>{{artist}}</p> </div> <p class="album">{{album}}</p> <p class="duration">{{duration}}</p> </button> <div class="content_closed"> <div class="media-container"> <table cellspacing="0"> <tr> <th>Song</th> <td>{{song}}</td> </tr> <tr> <th>Artist</th> <td>{{artist}}</td> </tr> <tr> <th>Album</th> <td>{{album}}</td> </tr> <tr> <th>Year</th> <td>{{year}}</td> </tr> <tr> <th>Country</th> <td>{{country}}</td> </tr> </table><iframe class="vid" src="{{yt_link}}?autoplay=0" title="YouTube video player" frameborder="0" modestbranding allowfullscreen></iframe> </div> {{#notes}}<div class="media-container"> <h3>Notes:</h3> <p>{{{.}}}</p> </div>{{/notes}} <div class="music-link-container"> {{#wiki}}<div class="music-link"> <img src="../img/icons/wiki.png"> <a href="{{.}}" target="_blank"><p>wikipedia</p></a> </div> {{/wiki}} <div class="music-link"> <img src="../img/icons/tidal.png"> <a href="{{tidal_link}}" target="_blank"><p>tidal</p></a> </div> <div class="music-link"> <img src="../img/icons/spotify.png"> <a href="{{spotify_link}}" target="_blank"><p>spotify</p></a> </div> </div> </div> </div> {{/tracklist}}';
+
+    const rendered = Mustache.render(template, {tracklist: data});
     document.getElementById('tracklist-placeholder').innerHTML = rendered;
     initTracklistInteractions();
 }
+
+function setActiveSortButton(activeClass) {
+    const buttons = document.querySelectorAll('.sort-btn');
+    buttons.forEach(btn => btn.classList.remove('active'));
+
+    const activeBtn = document.querySelector(`.sort-btn.${activeClass}`);
+    if (activeBtn) activeBtn.classList.add('active');
+}
+
+function sortByDefault() {
+    const sorted = [...tracklist].sort((a, b) => a.originalNum - b.originalNum);
+    sorted.forEach((track, index) => {
+    track.num = index + 1;
+    });
+    renderList(sorted);
+    setActiveSortButton('sort-default');
+}
+function sortByYear() {
+    const sorted = [...tracklist].sort((a, b) => (a.year || 0) - (b.year || 0));
+    sorted.forEach((track, index) => {
+    track.num = index + 1;
+    });
+
+    renderList(sorted);
+    setActiveSortButton('sort-year');
+}
+
+
+renderList(tracklist);
+
+    // const template_tidal = '{{#tracklist}} <div class="track-container"> <button type="button" class="coll-closed track-toggle"> <h1 class="track-num">{{num}}</h1> <img class="album-icon" src="{{num}}.png" alt= "{{album}} by {{artist}}"> <div class="song-info"> <h3>{{song}}</h3> <p>{{artist}}</p> </div> <p class="album">{{album}}</p> <p class="duration">{{duration}}</p> </button> <div class="content_closed"> <div class="media-container"> <table cellspacing="0"> <tr> <th>Song</th> <td>{{song}}</td> </tr> <tr> <th>Artist</th> <td>{{artist}}</td> </tr> <tr> <th>Album</th> <td>{{album}}</td> </tr> <tr> <th>Year</th> <td>{{year}}</td> </tr> <tr> <th>Country</th> <td>{{country}}</td> </tr> </table>{{#tidal_embed}}<iframe class="tidal-embed" src="{{.}}" frameborder="0" allowfullscreen allow="encrypted-media *; fullscreen *; web-share *;"></iframe>{{/tidal_embed}}</div> {{#notes}}<div class="media-container"> <h3>Notes:</h3> <p>{{{.}}}</p> </div>{{/notes}} <div class="music-link-container"> {{#wiki}}<div class="music-link"> <img src="../img/icons/wiki.png"> <a href="{{.}}"target="_blank"><p>wikipedia</p></a> </div> {{/wiki}}<div class="music-link"> <img src="../img/icons/yt.png"> <a href="{{yt_link}}" target="_blank"><p>youtube</p></a> </div> <div class="music-link"> <img src="../img/icons/tidal.png"> <a href="{{tidal_link}}" target="_blank"><p>tidal</p></a> </div> <div class="music-link"> <img src="../img/icons/spotify.png"> <a href="{{spotify_link}}" target="_blank"><p>spotify</p></a> </div> </div> </div> </div> {{/tracklist}}';

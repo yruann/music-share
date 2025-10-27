@@ -167,23 +167,43 @@ iframe.vid {
     padding: 0;
     width: auto;
 }
-
-
-.tracklist-controls {
+.track-head{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: end;
     width: 100%;
-    text-align: right;
 }
 
-.tracklist-controls button{
-    padding: 7px 10px;
+.right{
+    text-align: left;
+}
+
+.right div {
+    display: inline-block;
+}
+.right button{
+    font-size: 14px;
+    padding: 5px 7px;
+    border-radius: 5px;
+}
+.visibility button{
     background-color: rgb(85, 90, 230);
     color: white;
-    border-radius: 5px;
-
 }
-.tracklist-controls button:hover{
+.visibility button:hover{
     background-color: rgb(63, 67, 198);
 }
+.sort{
+    margin: 0 10px 0 0;
+}
+.sort button{
+    background-color: #dadada;
+}
+.sort button:hover, .sort button.active{
+    background-color: #bababa;
+}
+
 /*  */
 #tracklist-placeholder {
     margin: 0;
@@ -307,6 +327,7 @@ iframe.vid {
     /* iframe.vid {
         width: 44vw;
     } */
+    
 }
 
 @media screen and (max-width: 500px) {
@@ -356,6 +377,20 @@ iframe.vid {
     /* .album-icon{
         width: 35px;
         height: 35px;
+    } */
+}
+
+@media screen and (max-width: 400px) {
+    .right {
+
+    }
+    .track-head{
+        flex-flow: column wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    /* .right div {
+        display: block;
     } */
 }
 @media screen and (max-width: 330px) {
