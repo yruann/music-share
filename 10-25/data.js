@@ -393,7 +393,8 @@ let tracklist = [
 ];
 
 
-tracklist.forEach(track => {
+tracklist.forEach((track, index) => {
+    track.originalNum = index + 1;
     track.tidal_embed = getTidalEmbedLink(track.tidal_link);
 });
 
@@ -404,7 +405,7 @@ function getTidalEmbedLink(url) {
 }
 
 function renderList(data) {    
-    const template = '{{#tracklist}} <div class="track-container {{#fav}}fav-track{{/fav}} "> <button type="button" class="coll-closed track-toggle"> <h1 class="track-num">{{num}}</h1> <img class="album-icon" src="{{num}}.png"> <div class="song-info"> <h3>{{song}}</h3> <p>{{artist}}</p> </div> <p class="album">{{album}}</p> <p class="duration">{{duration}}</p> </button> <div class="content_closed"> <div class="media-container"> <table cellspacing="0"> <tr> <th>Song</th> <td>{{song}}</td> </tr> <tr> <th>Artist</th> <td>{{artist}}</td> </tr> <tr> <th>Album</th> <td>{{album}}</td> </tr> <tr> <th>Year</th> <td>{{year}}</td> </tr> <tr> <th>Country</th> <td>{{country}}</td> </tr> </table><iframe class="vid" src="{{yt_link}}?autoplay=0" title="YouTube video player" frameborder="0" modestbranding allowfullscreen></iframe> </div> {{#notes}}<div class="media-container"> <h3>Notes:</h3> <p>{{{.}}}</p> </div>{{/notes}} <div class="music-link-container"> {{#wiki}}<div class="music-link"> <img src="../img/icons/wiki.png"> <a href="{{.}}" target="_blank"><p>wikipedia</p></a> </div> {{/wiki}} <div class="music-link"> <img src="../img/icons/tidal.png"> <a href="{{tidal_link}}" target="_blank"><p>tidal</p></a> </div> <div class="music-link"> <img src="../img/icons/spotify.png"> <a href="{{spotify_link}}" target="_blank"><p>spotify</p></a> </div> </div> </div> </div> {{/tracklist}}';
+    const template = '{{#tracklist}} <div class="track-container {{#fav}}fav-track{{/fav}} "> <button type="button" class="coll-closed track-toggle"> <h1 class="track-num">{{num}}</h1> <img class="album-icon" src="{{originalNum}}.png"> <div class="song-info"> <h3>{{song}}</h3> <p>{{artist}}</p> </div> <p class="album">{{album}}</p> <p class="duration">{{duration}}</p> </button> <div class="content_closed"> <div class="media-container"> <table cellspacing="0"> <tr> <th>Song</th> <td>{{song}}</td> </tr> <tr> <th>Artist</th> <td>{{artist}}</td> </tr> <tr> <th>Album</th> <td>{{album}}</td> </tr> <tr> <th>Year</th> <td>{{year}}</td> </tr> <tr> <th>Country</th> <td>{{country}}</td> </tr> </table><iframe class="vid" src="{{yt_link}}?autoplay=0" title="YouTube video player" frameborder="0" modestbranding allowfullscreen></iframe> </div> {{#notes}}<div class="media-container"> <h3>Notes:</h3> <p>{{{.}}}</p> </div>{{/notes}} <div class="music-link-container"> {{#wiki}}<div class="music-link"> <img src="../img/icons/wiki.png"> <a href="{{.}}" target="_blank"><p>wikipedia</p></a> </div> {{/wiki}} <div class="music-link"> <img src="../img/icons/tidal.png"> <a href="{{tidal_link}}" target="_blank"><p>tidal</p></a> </div> <div class="music-link"> <img src="../img/icons/spotify.png"> <a href="{{spotify_link}}" target="_blank"><p>spotify</p></a> </div> </div> </div> </div> {{/tracklist}}';
 
     const rendered = Mustache.render(template, {tracklist: data});
     document.getElementById('tracklist-placeholder').innerHTML = rendered;
@@ -420,12 +421,19 @@ function setActiveSortButton(activeClass) {
 }
 
 function sortByDefault() {
-    const sorted = [...tracklist].sort((a, b) => a.num - b.num);
+    const sorted = [...tracklist].sort((a, b) => a.originalNum - b.originalNum);
+    sorted.forEach((track, index) => {
+    track.num = index + 1;
+    });
     renderList(sorted);
     setActiveSortButton('sort-default');
 }
 function sortByYear() {
     const sorted = [...tracklist].sort((a, b) => (a.year || 0) - (b.year || 0));
+    sorted.forEach((track, index) => {
+    track.num = index + 1;
+    });
+
     renderList(sorted);
     setActiveSortButton('sort-year');
 }
