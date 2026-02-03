@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    	<title>💿 (02.06.2026)</title>
+		<link rel="icon" href="../img/icons/favicon.ico">
+
+    	<link rel="stylesheet" type="text/css" href="../css/style.css">
+		<link rel="stylesheet" type="text/css" href="../css/music.css">
+		<link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet" />
+	</head>
+
+	<body onload="renderList()">
+		<header>
+			<div>
+				<a id="title" href="../index.html"><em>music-share</em></a>
+				<nav>
+					<div>
+						<button type="button" class="coll-opened"><li><span>2025</span></li></button>
+						<ul class="content_opened">
+							<li><a href="../10-25/10-25.html">☆ (10.23.2025)</a></li>
+						</ul>
+						<!-- <li><a href="../contact.html"><span>contact</span></a></li> -->
+                        <button type="button" class="coll-opened"><li><span>2025</span></li></button>
+						<ul class="content_opened">
+							<li><a href="02-26.html">💿 (02.06.2026) <h3>*new!</h3></a></li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</header>
+
+		<main>
+
+			<div class="music">
+				<h1>💿 (02.26.2026)</h1>	
+
+                <div class="media-container main-cont">
+					<iframe class="yt-playlist" src="https://www.youtube.com/embed/videoseries?si=FMfwZzIs2WsArxi7&amp;list=PLOmUkmbqsrKiFkHPWQRslWZCh92jSfJPx" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+					<div class="playlist-description">
+						<p>This playlist is made up of different tracks from some of the CDs I own and was inspired by this compilation CD I found that started with Stereolab and ended with Nina Simone. The collection I started last year is approaching 50 CDs! A few more if you're to count the few records and cassettes I have also (one track on here is from a cassette). I included as many songs as I could across many genres and attempted to order it in a comprehensible manner, so I’m really hoping it’s not too incohesive…</p>
+
+						<p>(Also, I'm at a point where I'm growing increasingly frustrated with trying to figure out a good way to share music with others online. What the hell am I even supposed to use at this point. YouTube feels very clunky and not ideal but it's the only platform that has all these songs.)</p>
+
+						<h1>More to Explore:</h1>
+							<div class="music-link"> <img src="../img/icons/yt.png"> <a href="https://youtube.com/playlist?list=PLOmUkmbqsrKiFkHPWQRslWZCh92jSfJPx&si=2TSoKwtBLx71Ywsm" target="_blank"><p>playlist link</p></a> </div>
+							<div class="music-link"> <img src="../img/icons/discogs.png"> <a href="https://www.discogs.com/user/yingyng" target="_blank"><p>my discogs profile</p></a> </div>
+
+					</div>
+                </div>
+				<br><br>
+				<div class="track-head">
+					<div class="left">
+						<h1>Tracks</h1>
+						<!-- <h3>*click on the containers to learn about each track!</h3> -->
+					</div>
+					<div class="right">
+						<div class="sort">
+							<p>Sort by:</p>
+							<button class="sort-btn sort-default active" onclick="sortByDefault()">Default</button>
+							<button class="sort-btn sort-year" onclick="sortByYear()">Year ↑</button>
+						</div>
+						<div class="visibility">
+							<p>Visibility:</p>
+ 							<button onclick="expandAllTracks()">Expand All</button>
+							<button onclick="collapseAllTracks()">Collapse All</button>
+						</div>
+					</div>
+				</div>
+				<div id="tracklist-placeholder">Loading...</div>
+
+            </div>
+		</main>
+		<script src="https://unpkg.com/mustache@latest"></script>
+        <script type="text/javascript" src="data.js"></script>
+		<script src="../main.js"></script>
+	</body>
+</html>
+					
+
