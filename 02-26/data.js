@@ -9,7 +9,7 @@ let tracklist = [
         yt_link: `https://www.youtube.com/embed/ZUjDMdSwefk`,
         discogs_release: `3774872`,
         wiki: ``,
-        notes: `How I feel trying to do anything or be anyone. “I heard you have a compilation of every good song ever done by anybody.” Yeah. How I felt making this.`,
+        notes: `How I feel trying to do anything or be anyone. “I heard you have a compilation of every good song ever done by anybody.” Me making this...`,
         fav: `true`,
     }, 
     {
@@ -178,7 +178,7 @@ let tracklist = [
         yt_link: `https://www.youtube.com/embed/9bZwbhhc2gE`,
         discogs_release: `3508197`,
         wiki: ``,
-        notes: `This album snapped me out of being depressed when I was digging through CDs. Garota Moderna (two tracks ago) did this as well. The first track of this album, Na Mangueira, is what I can only describe as delightful.`,
+        notes: `This album snapped me out of a depressive lull when I was digging through CDs. Garota Moderna (two tracks ago) did this as well. The first track of this album, Na Mangueira, is what I can only describe as delightful.`,
         fav: ``,
     },
     {
@@ -191,7 +191,7 @@ let tracklist = [
         yt_link: `https://www.youtube.com/embed/g-kz7o9g2X4`,
         discogs_release: `5257314`,
         wiki: ``,
-        notes: `This is the CD that starts with Stereolab and ends with Nina Simone. Possibly questionable compilation but I like it.`,
+        notes: `This is the CD that starts with Stereolab and ends with Nina Simone. Possibly questionable compilation but I personally like it.`,
         fav: ``,
     },
     {

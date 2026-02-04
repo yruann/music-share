@@ -38,10 +38,10 @@ div .content_closed {
 }
 
 .fav-track {
-    background-color: rgb(244, 230, 255);
+    background-color: rgb(247, 236, 255);
 }
 .fav-track:hover{
-    background-color: rgb(227, 207, 243);
+    background-color: rgb(238, 222, 250);
 }
 .track-container .coll-closed > *{
     display: inline-block;
