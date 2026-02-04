@@ -126,7 +126,7 @@ let tracklist = [
         yt_link: `https://www.youtube.com/embed/TY7YFnoi2yE`,
         discogs_release: `565185`,
         wiki: ``,
-        notes: `This compilation CD from The Orb is one of the first CDs I bought myself. Also still one of the best in my collection. The Twin Peaks theme is on here and so is a convoluted version of the Barbie song? Another classic is "I Wanna Be a Fishy", which goes, “I wanna be a little fishy, yes I do, yes I do, yes I dooo. I wanna swim around and be a little fish clown cause it is so cool to be under the waterrrr” (actually a great song) <br> Also look at the <a href="https://www.discogs.com/release/565185-The-Orb-Back-To-Mine/image/SW1hZ2U6NTE4MjQ5Ng==" target="_blank">track commentary</a> on this thing. "Would you let your daughter near this man?" (about Aphex Twin)`,
+        notes: `This compilation CD from The Orb is one of the first CDs I bought myself. Also still one of the best in my collection. The Twin Peaks theme is on here and so is a convoluted version of the Barbie song? Another classic is <a href='https://www.youtube.com/watch?v=vTbjhvs1gHI' target='_blank'>"I Wanna Be a Fishy"</a>, which goes, “I wanna be a little fishy, yes I do, yes I do, yes I dooo. I wanna swim around and be a little fish clown cause it is so cool to be under the waterrrr” (actually unironically a song I find really great) <br> Also look at the <a href="https://www.discogs.com/release/565185-The-Orb-Back-To-Mine/image/SW1hZ2U6NTE4MjQ5Ng==" target="_blank">track commentary</a> on this thing. "Would you let your daughter near this man?" (about Aphex Twin)`,
         fav: ``,
     },
     {
