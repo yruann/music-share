@@ -48,7 +48,7 @@ let tracklist = [
         yt_link: `https://www.youtube.com/embed/TXaF-0kLmF8`,
         discogs_release: `1952980`,
         wiki: ``,
-        notes: ``,
+        notes: `I keep hearing "We accept the French" rather than "Will you accept our friendship?"`,
         fav: ``,
     },
     {
