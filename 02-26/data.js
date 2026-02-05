@@ -23,7 +23,7 @@ let tracklist = [
         yt_link: `https://www.youtube.com/embed/lYzOrpWL6U8`,
         discogs_release: `4088687`,
         wiki: ``,
-        notes: `This and the next song are both on MTV Grind Vol. 1, which was released for MTV's 'The Grind Workout'. They also had a matching clothing line called "Grind Sport". <a href= 'https://www.youtube.com/watch?v=L6uyNpISHL0' target='_blank'>Here</a> is the full compilation.`,
+        notes: `This and the next song are both on MTV Grind Vol. 1, which was released for MTV's 'The Grind Workout'. They also had a matching clothing line called "Grind Sport". <a href= 'https://www.youtube.com/watch?v=L6uyNpISHL0' target='_blank'>Here</a> is the full mix.`,
         sounds: `<div class="tag">vertigo in the club</div><div class="tag">an afterimage</div>`,
         fav: `true`,
     }, 
