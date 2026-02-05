@@ -134,6 +134,26 @@ iframe.vid {
     padding: 10px 5px;
 }
 
+.tags, .tags h3{
+    display: inline-block;
+}
+.tags h3 {
+    margin-right: 5px;
+}
+.tag{
+    display: inline-block;
+    font-size: 14px;
+    padding: 3px 7px;
+    margin-right: 5px;
+    border-radius: 5px;
+    background-color: #2D2C31;
+    color: #ffffff;
+    /* background-color: #ffffff; */
+    border: .5px solid rgb(0,0,0);
+
+}
+
+
 .yt-playlist {
     width: 40vw;
     height: 22.5vw;
