@@ -47,7 +47,7 @@ let tracklist = [
         artist: `LCD Soundsystem`,
         album: `The Man Machine (Mojo celebrates the electronic revolution)`,
         year: 2009,
-        duration: `8:36`,
+        duration: `6:49`,
         yt_link: `https://www.youtube.com/embed/TXaF-0kLmF8`,
         discogs_release: `1952980`,
         wiki: ``,
