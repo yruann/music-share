@@ -24,7 +24,7 @@ let tracklist = [
         discogs_release: `4088687`,
         wiki: ``,
         notes: `This and the next song are both on MTV Grind Vol. 1, which was released for MTV's 'The Grind Workout'. They also had a matching clothing line called "Grind Sport". <a href= 'https://www.youtube.com/watch?v=L6uyNpISHL0' target='_blank'>Here</a> is the full compilation.`,
-        sounds: `<div class="tag">vertigo in the club</div>`,
+        sounds: `<div class="tag">vertigo in the club</div><div class="tag">an afterimage</div>`,
         fav: `true`,
     }, 
     {
@@ -122,7 +122,7 @@ let tracklist = [
         discogs_release: `8950062`,
         wiki: ``,
         notes: `I had to include TLC on here somehow. This playlist started out very TLC heavy, but as I worked on it, I realized I had forgotten about many of the electronic CDs I bought in the summer. This isn’t my favorite TLC song, but the intro scratches a particular itch and also fits well here. I love the intro. I didn’t know this was a cover of Prince since I didn’t grow up listening to anything other than 2010s pop and country radio in the car 💔 This cover is distinctly 90s girl group, but the original has so much more sensuality and depth (go listen to Prince).`,
-        sounds: ``,
+        sounds: `<div class="tag">i wish i was your girlfriend</div><div class="tag">an amazing cover</div>`,
         fav: ``,
     },
     {
@@ -184,7 +184,7 @@ let tracklist = [
     {
         num: 14,
         song: `It's a Woman's World`,
-        artist: `Zuco 103, Lee Scratch Perry`,
+        artist: `Zuco 103, Lee "Scratch" Perry`,
         album: `Whaa!`,
         year: 2005,
         duration: `3:19`,
@@ -192,7 +192,7 @@ let tracklist = [
         discogs_release: `3508197`,
         wiki: ``,
         notes: `This album snapped me out of a depressive lull when I was digging through CDs. Garota Moderna (two tracks ago) did this as well. The first track of this album, Na Mangueira, is what I can only describe as delightful.`,
-        sounds: `<div class="tag">pure joy!</div><div class="tag">Sunday morning</div>`,
+        sounds: `<div class="tag">pure joy!</div><div class="tag">a Sunday morning</div>`,
         fav: ``,
     },
     {
