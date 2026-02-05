@@ -66,7 +66,7 @@ let tracklist = [
         discogs_release: `15565519`,
         wiki: ``,
         notes: `I found this album for 99 cents in the suburbs. Still don’t know how that happened.`,
-        sounds: `<div class="tag">dew</div><div class="tag">forest shade</div><div class="tag">a very reflective beetle</div><div class="tag">a large insect colony</div>`,
+        sounds: `<div class="tag">dew</div><div class="tag">forest shade</div><div class="tag">a very reflective beetle</div><div class="tag">a large insect colony</div><div class="tag">a sunshower</div>`,
         fav: ``,
     },
     {
