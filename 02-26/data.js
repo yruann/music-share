@@ -232,7 +232,6 @@ tracklist.forEach((track, index) => {
 });
 
 function getDiscogsLink(release) {
-    if (!release) return '';
     const link = 'https://www.discogs.com/release/' + release;
     return link;
 }
